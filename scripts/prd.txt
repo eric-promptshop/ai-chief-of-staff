@@ -1,0 +1,116 @@
+# Product Requirements Document (PRD): AI Chief of Staff
+
+## 📘 Overview
+**Project Name:** AI Chief of Staff  
+**Version:** MVP v1.0  
+**Owner:** Optimind AI  
+**Status:** In Development  
+**Last Updated:** 2025-04-29
+
+## 🎯 Purpose
+To design an intelligent AI-first orchestration layer that manages a digital workforce of agents. This Chief of Staff will enable users to delegate tasks, configure agent autonomy, and oversee execution using explainable, secure, and context-aware AI interactions.
+
+This PRD is fully compatible with **Task-Master** framework standards for modular, agent-based projects.
+
+---
+
+## ✅ Goals
+- Enable users to delegate tasks via natural language.
+- Dynamically configure and assign agents using Microsoft AutoGen.
+- Log task completions and agent decisions using Supabase.
+- Support multi-agent chat threads and explainability.
+- Design a modular UI with Vercel-deployed frontend.
+
+---
+
+## 🔍 User Stories
+1. **As a Founder**, I want to delegate a task to my AI team by typing a command.
+2. **As an Operator**, I want to view what each agent is working on.
+3. **As an Analyst**, I want to upload company documents and use them to train writing agents.
+4. **As a Team Lead**, I want to monitor execution logs and view agent autonomy levels.
+5. **As an Admin**, I want to manually override agent assignments.
+
+---
+
+## 🧩 Features
+
+### 🔗 Core
+| Feature                        | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| Delegation Engine             | Users input a task. ChiefOfStaffAgent assigns to optimal agent.            |
+| Manual Agent Selector         | Select a specific agent and provide a task manually.                        |
+| Group Thread Collaboration    | View a real-time log of agent discussions and actions.                      |
+| Autonomy Slider              | Adjust how much freedom an agent has in execution.                          |
+| Explainability Logs          | Retrieve records of why and how decisions were made.                        |
+| Contextual Training Uploads   | Upload PDFs or link drives to feed RAG-based agent memory.                  |
+
+### 🛠️ Infrastructure
+- **Frontend:** React + Tailwind, deployed via Vercel
+- **Backend:** FastAPI (delegation routes)
+- **Database:** Supabase (delegated tasks, logs)
+- **Vector Storage:** Pinecone (context ingestion)
+- **Orchestration:** Microsoft AutoGen for agent collaboration
+
+---
+
+## 🔁 TaskMaster-Compatible Modules
+
+| Module Name         | Path                     | Type     | Agents Involved           | Output                         |
+|---------------------|--------------------------|----------|----------------------------|--------------------------------|
+| Delegation Engine   | `backend/routes/delegate.py` | POST API | ChiefOfStaffAgent, Analyst | task assigned                  |
+| Manual Assignment   | `backend/routes/assign.py`   | POST API | All agents                 | agent manually assigned        |
+| Explainability Logs | `backend/routes/logs.py`     | GET API  | ChiefOfStaffAgent          | logs returned from Supabase    |
+| RAG Context Upload  | `backend/routes/context.py`  | POST API | WritingAgent               | file saved to backend          |
+
+---
+
+## 📅 Milestones
+| Week | Milestone                                |
+|------|------------------------------------------|
+| 1    | Agent & delegation routes scaffolded     |
+| 2    | Supabase integration + FastAPI backend   |
+| 3    | AutoGen agents created + linked to routes|
+| 4    | RAG ingestion and context interface      |
+| 5    | UI on Vercel: Agent chat, slider, uploader|
+| 6    | Internal Alpha + QA pass via Task-Master |
+
+---
+
+## 📈 Success Metrics
+| Metric                          | Target       |
+|--------------------------------|--------------|
+| Task delegation success rate   | ≥ 80%        |
+| Explainability log usage       | ≥ 70%        |
+| Context ingestion adoption     | ≥ 60%        |
+| UI retention after week 1      | ≥ 50%        |
+
+---
+
+## 🔐 Security & Compliance
+- OAuth 2.0 for authentication
+- Supabase row-level security for task data
+- Encrypted file uploads for RAG ingestion
+- Logs export & delete API endpoints
+
+---
+
+## 🧠 Agent Overview
+- `ChiefOfStaffAgent`: Assigns and monitors
+- `AnalystAgent`: Interprets numerical input/data
+- `CommsAgent`: Writes external messaging
+- `WritingAgent`: Drafts documents using RAG
+- `ResearchAgent`: Gathers web intel & sources
+
+---
+
+## 📎 Appendix
+- GitHub Repo: [URL TBD]
+- Figma Design Mockups: [Link TBD]
+- Supabase Table Schemas: [Document TBD]
+- RAG Configuration: Pinecone Index Settings
+
+---
+
+**Maintainer:** Optimind AI DevOps & Agent Engineering Team
+
+**Compliance:** ✅ Fully Task-Master Compliant PRD 

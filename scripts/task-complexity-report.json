@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-30T03:15:00.125Z",
+    "tasksAnalyzed": 15,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Set up project infrastructure and repository",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the project infrastructure setup into specific subtasks covering repository creation, frontend setup, backend setup, linting configuration, and dependency installation. For each subtask, specify exact commands and configuration details.",
+      "reasoning": "This task involves multiple technologies (React, FastAPI, Supabase, Pinecone) and requires setting up various configurations. While not extremely complex, it requires careful organization of project structure and dependencies across different platforms."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Configure Supabase database and schema",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the Supabase configuration into subtasks covering project creation, table schema design, security policy implementation, relationship setup, index creation, and testing. Include SQL statements and specific configuration parameters for each subtask.",
+      "reasoning": "Database schema design requires careful planning for relationships, indexes, and security policies. The task involves multiple tables with foreign key relationships and row-level security, which adds complexity to ensure proper data integrity and access control."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Set up Pinecone vector database for RAG",
+      "complexityScore": 5,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the Pinecone setup into subtasks covering account creation, index initialization with proper dimensions, namespace configuration, and utility function implementation. Include API parameters and example code for each operation.",
+      "reasoning": "Setting up Pinecone is moderately complex as it requires understanding vector dimensions, metadata configuration, and implementing utility functions for vector operations. However, the scope is relatively focused compared to other tasks."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Implement FastAPI backend structure",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break down the FastAPI implementation into subtasks covering application initialization, middleware setup, authentication integration, route organization, service modules for database interactions, CORS configuration, and health check endpoints. Include code snippets and architectural decisions for each component.",
+      "reasoning": "This task has high complexity due to the need to implement a well-structured API with multiple middleware components, authentication, and integrations with both Supabase and Pinecone. It requires careful architectural planning to ensure maintainability and performance."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Implement Microsoft AutoGen integration",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the AutoGen integration into subtasks covering installation, base agent class implementation, conversation manager setup, configuration system, message handling utilities, and persistence mechanism. Include class diagrams and interface definitions for each component.",
+      "reasoning": "Integrating AutoGen requires deep understanding of the framework and implementing several complex components like conversation management and persistence. The agent architecture needs careful design to support the multi-agent collaboration system."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Implement ChiefOfStaffAgent and delegation logic",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break down the ChiefOfStaffAgent implementation into subtasks covering agent class creation, delegation engine logic, task parsing, API endpoint implementation, Supabase integration for task management, logging system, and agent selection algorithms. Include prompt templates and decision logic for each component.",
+      "reasoning": "This is a highly complex task as it involves the core delegation logic that powers the entire system. It requires sophisticated algorithms for task analysis, agent selection, and decision-making, along with integration with multiple system components."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implement specialized agents (Analyst, Comms, Writing, Research)",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the specialized agent implementation into subtasks covering base functionality for all agents, then specific implementations for each agent type (Analyst, Comms, Writing, Research), agent registration system, and API endpoint creation. Include agent-specific prompts and capability definitions.",
+      "reasoning": "Creating multiple specialized agents with different capabilities is complex due to the need to implement distinct functionalities while maintaining a consistent interface. Each agent type requires specific prompts and integration with different external systems."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Implement manual agent assignment API",
+      "complexityScore": 5,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the manual assignment API implementation into subtasks covering endpoint creation, validation logic, reassignment functionality, and notification system. Include API request/response formats and validation rules.",
+      "reasoning": "This task is moderately complex as it involves creating an API endpoint with validation logic and integration with the existing agent and task systems. However, it's more focused in scope than some of the other tasks."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement explainability logs API",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the logs API implementation into subtasks covering endpoint creation, query parameter handling, pagination implementation, reasoning extraction, and export functionality. Include database query optimizations and response format specifications.",
+      "reasoning": "The logs API requires handling complex queries with multiple filters, pagination, and potentially large datasets. Extracting meaningful reasoning from agent decisions adds another layer of complexity to this task."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Implement RAG context upload and processing",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break down the RAG context processing implementation into subtasks covering upload endpoint creation, document validation, text extraction from different file types, chunking strategy, embedding generation, vector storage integration, and context metadata management. Include processing pipeline architecture and error handling strategies.",
+      "reasoning": "This task has high complexity due to the multiple processing steps required for RAG contexts, including handling different file types, chunking strategies, embedding generation, and vector storage. The pipeline needs to be robust and handle various edge cases."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Implement agent autonomy control mechanism",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the autonomy control implementation into subtasks covering autonomy level definitions, API endpoint creation, decision validation logic, logging system, and guardrail implementation. Include specific permissions and capabilities for each autonomy level.",
+      "reasoning": "Implementing autonomy controls requires careful consideration of permission levels, guardrails, and validation logic. The system needs to balance flexibility with safety, which adds complexity to the design and implementation."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Create React frontend base with authentication",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the React frontend implementation into subtasks covering project initialization, routing setup, authentication UI components, protected route implementation, token management, and layout creation. Include component hierarchy and state management approach.",
+      "reasoning": "Setting up a React frontend with authentication involves multiple components and careful state management. The authentication flow, token handling, and protected routes add significant complexity to what might otherwise be a straightforward UI task."
+    },
+    {
+      "taskId": 13,
+      "taskTitle": "Implement task delegation and agent monitoring UI",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the task delegation UI implementation into subtasks covering delegation form creation, agent selection interface, task list view, activity dashboard, task detail view, and notification system. Include wireframes and component specifications for each interface element.",
+      "reasoning": "This UI task is complex due to the need for multiple interactive components, real-time updates, and integration with the backend API. The task list, agent monitoring, and chat thread viewer all require sophisticated UI components and state management."
+    },
+    {
+      "taskId": 14,
+      "taskTitle": "Implement document upload and context management UI",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the document upload UI implementation into subtasks covering drag-and-drop interface, progress indicators, context management dashboard, metadata editing interface, and search functionality. Include component specifications and state management details.",
+      "reasoning": "Creating a document upload interface with progress tracking and context management requires several interactive components. The version history and metadata editing add complexity to what might otherwise be a standard file upload interface."
+    },
+    {
+      "taskId": 15,
+      "taskTitle": "Implement autonomy control and explainability UI",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the autonomy control UI implementation into subtasks covering slider component creation, settings panel, logs viewer with filtering, log detail view, and visualization components. Include component specifications and data visualization approaches.",
+      "reasoning": "This UI task involves creating interactive controls for agent autonomy and sophisticated log viewing capabilities. The decision tree visualization and detailed filtering options add significant complexity to the implementation."
+    }
+  ]
+}

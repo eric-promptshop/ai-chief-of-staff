@@ -1,0 +1,43 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `lock` files in the `frontend` directory
+    directory: "/frontend"
+    # Check for updates once a week (on Monday)
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    # Group all updates into a single PR
+    groups:
+      frontend-dependencies:
+        patterns:
+          - "*"
+    # Limit the number of open PRs
+    open-pull-requests-limit: 10
+
+  # Enable version updates for Python/pip
+  - package-ecosystem: "pip"
+    # Look for requirements.txt in the `backend` directory
+    directory: "/backend"
+    # Check for updates once a week (on Monday)
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    # Group all updates into a single PR
+    groups:
+      backend-dependencies:
+        patterns:
+          - "*"
+    # Limit the number of open PRs
+    open-pull-requests-limit: 10
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Look for GitHub Actions workflow files in the `.github/workflows` directory
+    directory: "/"
+    # Check for updates once a month
+    schedule:
+      interval: "monthly"
+    # Limit the number of open PRs
+    open-pull-requests-limit: 5 
